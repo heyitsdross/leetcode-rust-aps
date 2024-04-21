@@ -27,7 +27,7 @@ impl Solution {
         // Node.val always 0 <= val <= 9
 
         // Base case, neither value present and no carry over
-        let mut v1 = l1.unwrap_or_else(|| Box::new(Node::new(0)));
+        let v1 = l1.unwrap_or_else(|| Box::new(Node::new(0)));
 
         let v2 = l2.unwrap_or_else(|| Box::new(Node::new(0)));
 
@@ -56,7 +56,8 @@ impl Solution {
         } else {
             Some(Box::new(Node {
                 val: value,
-                next: Self::add_two_numbers(v1.next, v2.next),
+                next: None
+                //next: Self::add_two_numbers(v1.next, v2.next),
             }))
         }
     }
