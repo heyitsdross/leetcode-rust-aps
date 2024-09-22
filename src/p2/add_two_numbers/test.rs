@@ -1,4 +1,4 @@
-use super::*;
+use super::{Node, Solution};
 
 #[test]
 fn test_1() {
